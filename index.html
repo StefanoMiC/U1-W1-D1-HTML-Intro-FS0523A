@@ -1,0 +1,132 @@
+<!-- QUESTO E' UN COMMENTO IN HTML 
+
+    POSSIAMO AVERE UN COMMENTO SU PIU' DI UNA LINEA
+-->
+
+<!-- una struttura a tag fa parte della marcatura semantica di un foglio HTML -->
+<!-- il primo tag che ci deve essere è DOCTYPE-->
+<!DOCTYPE html>
+<!-- immediatamente seguto da html che è padre di tutti gli elementi della pagina (root element) -->
+<html lang="it">
+
+<head>
+    <!-- charset si definisce attributo del tag meta -->
+    <!-- gli elementi inseriti nel tag head non vengono visualizzati dall'utente -->
+    <meta charset="utf-8">
+    <meta name="description" content="questa è la descrizione della prima pagina">
+    <title>Questo è l'unico elemento visibile dall'utente nella parte alta del browser (TAB)</title>
+</head>
+
+<body>
+    <main>
+
+        <!-- qui ci saranno tutte gli elementi visibili dall'utente, la vera e propria pagina web -->
+
+        <h1>Titolo principale e
+            univoco (uno per pagina)</h1>
+        <!-- esistono elementi heading da 1 a 6 -->
+        <h6>Questo è il titolo più piccolo che possiamo ottenere</h6>
+
+        <!-- ancora interna su ID specifico tramite # obbligatorio -->
+        <a href="#pie-di-pagina">vai al footer</a>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <!-- br (break) serve a rompere in un punto preciso una linea di testo -->
+            <!-- è un tag autoconclusivo e presenta quindi una slash / prima della chisura del tag di apertura -->
+            <br />
+            Quasi asperiores numquam sapiente, oloremque adipisci
+            odit cupiditate eos explicabo, consequuntur esse molestiae veritatis sunt ut excepturi praesentium culpa
+            dignissimos alias reiciendis!
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+        <p>
+            Quasi <strong>asperiores numquam sapiente</strong>, <span style="color: red">doloremque adipisci</span>
+            odit cupiditate eos explicabo,<abbr title="Consequntor">csqtr</abbr> esse molestiae veritatis sunt ut
+            <code>
+        excepturi praesentium culpa
+        dignissimos alias reiciendis!
+    </code>
+        </p>
+
+        <!-- Elementi di blocco prenderanno SEMPRE tutto lo spazio disponibile in larghezza, nel contesto in cui sono inseriti -->
+        <!-- non necessariamente prenderanno tutto lo spazio disponibile(es. un contenitore più piccolo della larghezza della pagina che li contiene) -->
+        <p>paragrafo 1</p>
+        <p>paragrafo 2</p>
+        <p>paragrafo 3</p>
+        <p>paragrafo 4</p>
+
+        <!-- horizontal ruler - linea orizzontale (blocco) -->
+        <hr />
+        <!-- Elementi di tipo linea - sono fatti per essere usati principalmente dentro dei paragrafi, sono elementi che non occupano più spazio del loro contenuto -->
+        <!-- vengono anche usati degli span per mettere in fila più elementi in un'unica riga -->
+        <span>parola 1</span>
+        <span>parola 2</span>
+        <!-- <br /> -->
+        <span>parola 3</span>
+        <span>parola 4</span>
+
+        <!-- Lista ordinata -->
+
+        <!-- 
+        SCORCIATOIE:
+        - Spostare una riga in alto o in basso: ALT + FRECCIA SU/GIU
+        - Copiare una riga in alto o in basso: ALT + SHIFT + FRECCIA SU/GIU 
+        - ALT + MOUSECLICK - creazione di cursori multipli
+        - CTRL/CMD + D - selezionate elementi comuni (spostandovi con le frecce avrete cursori multipli da gestire)
+        - CTRL/CMD + L - seleziona l'intera riga
+        - CTRL/CMD + Z - annullo operazioni precedenti
+        - CTRL/CMD + Y - rieffettuo operazioni annullate
+    -->
+
+        <ol>
+            <li>elemento</li>
+            <li>elemento</li>
+            <li>elemento</li>
+            <li>elemento</li>
+        </ol>
+
+        <hr />
+
+        <ul>
+            <li>elemento 1</li>
+            <li>elemento 2</li>
+            <li>elemento 3</li>
+            <li>elemento 4</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorum commodi at similique nesciunt
+            voluptate
+            autem odit laudantium velit. un &nbsp;&nbsp;&nbsp;&nbsp;paragrafo si fa così: <code>&lt;p&gt;</code>Tempora
+            ducimus
+            necessitatibus fugiat
+            iusto obcaecati distinctio cupiditate
+            voluptatibus eaque optio. &copy; &reg; &euro;</p>
+
+        <!-- tag immagine vi permette di applicare un'immagine sia locale che esterna al vostro file html -->
+        <!-- richiede un attributo obbligatorio src - fonte dell'immagine (locale o esterna) -->
+        <!-- richiede un attributo abbastanza obbligatorio alt - rappresenta un testo associato all'immagine (utile sia se la risorsa non viene trovata, sia per gli spider di google)-->
+
+        <!-- si possono forzare delle dimensioni con attributi "width" e "height", è consigliato però usarne solo uno alla volta inizialmente -->
+        <!-- link locale in src -->
+        <img src="./assets/img/photo-1682686581663-179efad3cd2f.avif" alt="scuba diver in the ocean" width="100%">
+
+        <!-- link da risorsa esterna in src -->
+        <img src="https://images.unsplash.com/photo-1682685797743-3a7b6b8d8149?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="canyon" width="100%">
+    </main>
+    <footer id="pie-di-pagina">
+        <p>
+            <!-- ancora esterna(che apre un nuovo tab con target _blank) -->
+            <a href="https://epicode.com/it" target="_blank">Epicode&reg; 2023</a> -
+            <!-- ancora interna a un'altra pagina del vostro sito -->
+            <a href="./contacts.html">contatti</a>
+
+            <!-- ancora interna su ID specifico - vedi testa documento 👆-->
+        </p>
+    </footer>
+
+</body>
+<!-- il tag con la / interna rappresenta il tag di chiusura -->
+
+</html>
